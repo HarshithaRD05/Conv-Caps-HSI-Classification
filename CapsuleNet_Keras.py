@@ -111,8 +111,8 @@ if __name__ == "__main__":
         os.makedirs(args.save_dir)
 
     # file path of HSI dataset
-    image_file = r'E:\KSC.mat'
-    label_file = r'E:\KSC_gt.mat'
+    image_file = r'/home/harshitha/Conv-Caps-HSI-Classification/KSC.mat'
+    label_file = r'/home/harshitha/Conv-Caps-HSI-Classification/KSC_gt.mat'
 
     data, test_shuffle_number = readdata(image_file, label_file, train_nsamples=200, validation_nsamples=100,
                                          windowsize=args.windowsize, istraining=True)
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     (x_train, y_train), (x_valid, y_valid) = (data[0], data[1]), (data[2], data[3])
 
     # define model
-    model = CapsNet(input_shape=[args.windowsize, args.windowsize, 108],
+    model = CapsNet(input_shape=[args.windowsize, args.windowsize, 176],
                     n_class=args.n_class,
                     num_routing=args.num_routing)
     model.summary()

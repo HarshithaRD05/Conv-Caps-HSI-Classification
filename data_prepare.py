@@ -11,7 +11,7 @@ def load_data(image_file, label_file):
     image_data = sio.loadmat(image_file)
     label_data = sio.loadmat(label_file)
 
-    image = image_data['Kennedy176']
+    image = image_data['KSC']
     label = label_data['KSC_gt']
 
     image = image.astype(np.float32)
