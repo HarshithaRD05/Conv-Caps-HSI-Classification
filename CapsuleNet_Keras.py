@@ -111,8 +111,8 @@ if __name__ == "__main__":
         os.makedirs(args.save_dir)
 
     # file path of HSI dataset
-    image_file = r'/home/harshitha/Conv-Caps-HSI-Classification/KSC.mat'
-    label_file = r'/home/harshitha/Conv-Caps-HSI-Classification/KSC_gt.mat'
+    image_file = r'/content/KSC.mat'
+    label_file = r'/content/KSC_gt.mat'
 
     data, test_shuffle_number = readdata(image_file, label_file, train_nsamples=200, validation_nsamples=100,
                                          windowsize=args.windowsize, istraining=True)
